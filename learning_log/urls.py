@@ -5,5 +5,10 @@ from . import views
 
 app_name = 'learning_log'
 urlpatterns = [
+    # homepage
     path('', views.index, name='index'),
+    # Topic list
+    path('topics/', views.topics, name='topics'),
+    # Topic detail page
+    path('topics/<int:topic_id>', views.topic, name='topic'),
 ]
